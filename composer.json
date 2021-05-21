@@ -1,6 +1,6 @@
 {
-  "name": "biffbangpow/silverstripe-elementmodule-template",
-  "description": "A basic skeleton for a Silverstripe 4 elemental module",
+  "name": "biffbangpow/silverstripe-hero-element",
+  "description": "Hero element",
   "type": "silverstripe-vendormodule",
   "minimum-stability": "dev",
   "license": "proprietary",
