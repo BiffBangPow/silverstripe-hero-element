@@ -1,0 +1,6 @@
+---
+Name: elementwebp
+---
+BiffBangPow\Element\HeroElement:
+  extensions:
+    - BiffBangPow\Extension\WebPExtension
