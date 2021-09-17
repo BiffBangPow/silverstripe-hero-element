@@ -5,11 +5,13 @@ namespace BiffBangPow\Element;
 use DNADesign\Elemental\Models\BaseElement;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Assets\Image;
+use SilverStripe\Core\Config\Configurable;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\TextField;
 
 class HeroElement extends BaseElement
 {
+
     /**
      * @var string
      */
@@ -20,6 +22,12 @@ class HeroElement extends BaseElement
     private static $plural_name = 'hero elements';
 
     private static $description = 'Displays a large background image with text across it, designed for the top of page';
+
+    /**
+     * @config
+     * @var string
+     */
+    private static $upload_directory = 'Hero';
 
     /**
      * @var array
@@ -53,7 +61,9 @@ class HeroElement extends BaseElement
             'Root.Main',
             [
                 TextField::create('Subtitle'),
-                UploadField::create('BackgroundImage', 'Background Image')->setAllowedMaxFileNumber(1)
+                UploadField::create('BackgroundImage', 'Background Image')
+                    ->setAllowedFileCategories('image/supported')
+                    ->setFolderName($this->config()->get('upload_directory'))
             ]
         );
 
