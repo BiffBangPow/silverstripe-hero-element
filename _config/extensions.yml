@@ -1,6 +1,7 @@
 ---
-Name: elementwebp
+Name: hero-element-extensions
 ---
 BiffBangPow\Element\HeroElement:
   extensions:
     - BiffBangPow\Extension\WebPExtension
+    - BiffBangPow\Extension\CallToActionExtension

@@ -8,6 +8,18 @@
                 <% if $Subtitle %>
                     <h2 class="mt-3">$Subtitle</h2>
                 <% end_if %>
+                <% if $CTAType != 'None' %>
+                    <div class="cta">
+                        <p>
+                            <a href="$CTALink" class="cta-link"
+                                <% if $CTAType == 'External' %>target="_blank" rel="noopener"
+                                <% else_if $CTAType == 'Download' %>download
+                                <% end_if %>>
+                                $LinkText
+                            </a>
+                        </p>
+                    </div>
+                <% end_if %>
             </div>
         </div>
     </div>
