@@ -11,7 +11,7 @@
                 <% if $CTAType != 'None' %>
                     <div class="cta">
                         <p>
-                            <a href="$CTALink" class="cta-link"
+                            <a href="$CTALink" class="cta-link btn btn-secondary mt-4"
                                 <% if $CTAType == 'External' %>target="_blank" rel="noopener"
                                 <% else_if $CTAType == 'Download' %>download
                                 <% end_if %>>
