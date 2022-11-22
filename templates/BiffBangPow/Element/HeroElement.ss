@@ -2,11 +2,11 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <% if $ShowTitle%>
-                    <h1 class="title mb-0">$MarkdownText.Title.RAW</h1>
+                <% if $Title && $ShowTitle%>
+                    <h1 class="title mb-0">$Title</h1>
                 <% end_if %>
                 <% if $Subtitle %>
-                    <h2 class="mt-3">$Subtitle</h2>
+                    <div class="mt-3">$Subtitle</div>
                 <% end_if %>
                 <% if $CTAType != 'None' %>
                     <div class="cta">
