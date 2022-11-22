@@ -78,6 +78,6 @@ class HeroElement extends BaseElement
 
     public function getSimpleClassName()
     {
-        return 'hero-element';
+        return 'bbp-hero-element';
     }
 }
