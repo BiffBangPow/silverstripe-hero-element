@@ -16,12 +16,10 @@ class HeroElement extends BaseElement
      * @var string
      */
     private static $table_name = 'ElementHero';
-
     private static $singular_name = 'hero element';
-
     private static $plural_name = 'hero elements';
-
     private static $description = 'Displays a large background image with text across it, designed for the top of page';
+    private static $inline_editable = false;
 
     /**
      * @config
