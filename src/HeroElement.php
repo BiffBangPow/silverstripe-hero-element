@@ -7,6 +7,7 @@ use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Assets\Image;
 use SilverStripe\Core\Config\Configurable;
 use SilverStripe\Forms\FieldList;
+use SilverStripe\Forms\TextareaField;
 use SilverStripe\Forms\TextField;
 
 class HeroElement extends BaseElement
@@ -32,6 +33,7 @@ class HeroElement extends BaseElement
      */
     private static $db = [
         'Subtitle' => 'Text',
+        'Content' => 'Text'
     ];
 
     /**
@@ -59,6 +61,7 @@ class HeroElement extends BaseElement
             'Root.Main',
             [
                 TextField::create('Subtitle'),
+                TextareaField::create('Content', 'Additional Content'),
                 UploadField::create('BackgroundImage', 'Background Image')
                     ->setAllowedFileCategories('image/supported')
                     ->setFolderName($this->config()->get('upload_directory'))
