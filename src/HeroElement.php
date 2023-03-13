@@ -68,8 +68,6 @@ class HeroElement extends BaseElement
             ]
         );
 
-        $this->extend('updateCMSFields', $fields);
-
         return $fields;
     }
 
