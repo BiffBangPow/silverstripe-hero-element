@@ -1,4 +1,4 @@
-<div class="hero d-flex align-items-center py-4 bg-cover" style="background-image: url('<% if $WebPSupport %>$BackgroundImage.ScaleMaxWidth(1920).Format('webp').Link<% else %>$BackgroundImage.ScaleMaxWidth(1920).Link<% end_if %>')">
+<div class="hero d-flex align-items-center py-4 bg-cover" style="background-image: url('$BackgroundImage.ScaleMaxWidth(1920).Format('webp').Link')">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -14,7 +14,7 @@
                 <% if $CTAType != 'None' %>
                     <div class="cta">
                         <p>
-                            <a href="$CTALink" class="cta-link btn btn-secondary mt-4"
+                            <a href="$CTALink" class="cta-link btn btn-primary mt-4"
                                 <% if $CTAType == 'External' %>target="_blank" rel="noopener"
                                 <% else_if $CTAType == 'Download' %>download
                                 <% end_if %>>
