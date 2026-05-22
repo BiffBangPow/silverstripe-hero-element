@@ -16,8 +16,8 @@
   ],
   "require": {
     "dnadesign/silverstripe-elemental": "*",
-    "biffbangpow/silverstripe-cta-extension": "^1",
-    "biffbangpow/silverstripe-element-spacing": "^1"
+    "biffbangpow/silverstripe-element-spacing": "dev-master",
+    "silverstripe/linkfield": "^5"
   },
   "autoload": {
     "psr-4": {

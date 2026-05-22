@@ -1,6 +1,0 @@
----
-Name: hero-element-extensions
----
-BiffBangPow\Element\HeroElement:
-  extensions:
-    - BiffBangPow\Extension\CallToActionExtension
