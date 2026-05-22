@@ -11,18 +11,16 @@
                 <% if $Content %>
                     <div class="mt-3 hero-content">$Content</div>
                 <% end_if %>
-                <% if $CTAType != 'None' %>
-                    <div class="cta">
+
+                <% with $CTA %>
+                    <% if $exists %>
+                        <div class="cta">
                         <p>
-                            <a href="$CTALink" class="cta-link btn btn-primary mt-4"
-                                <% if $CTAType == 'External' %>target="_blank" rel="noopener"
-                                <% else_if $CTAType == 'Download' %>download
-                                <% end_if %>>
-                                $LinkText
-                            </a>
+                        <a class="cta-link btn btn-primary mt-4" href="$URL" <% if $OpenInNew %>target="_blank" rel="noopener noreferrer"<% end_if %>>$Title</a>
                         </p>
-                    </div>
-                <% end_if %>
+                        </div>
+                    <% end_if %>
+                <% end_with %>
             </div>
         </div>
     </div>

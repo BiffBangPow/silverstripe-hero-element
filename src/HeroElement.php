@@ -9,6 +9,8 @@ use SilverStripe\Assets\Image;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\TextareaField;
 use SilverStripe\Forms\TextField;
+use SilverStripe\LinkField\Form\LinkField;
+use SilverStripe\LinkField\Models\Link;
 
 class HeroElement extends BaseElement
 {
@@ -42,6 +44,7 @@ class HeroElement extends BaseElement
      */
     private static $has_one = [
         'BackgroundImage' => Image::class,
+        'CTA' => Link::class
     ];
 
     /**
@@ -49,6 +52,7 @@ class HeroElement extends BaseElement
      */
     private static $owns = [
         'BackgroundImage',
+        'CTA'
     ];
 
     /**
@@ -65,7 +69,8 @@ class HeroElement extends BaseElement
                 TextareaField::create('Content', 'Additional Content'),
                 UploadField::create('BackgroundImage', 'Background Image')
                     ->setAllowedFileCategories('image/supported')
-                    ->setFolderName($this->config()->get('upload_directory'))
+                    ->setFolderName($this->config()->get('upload_directory')),
+                LinkField::create('CTA', 'CTA')
             ]
         );
 
